@@ -2,19 +2,770 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
     text-transform: capitalize;
+}
+
+body{
+    /*width: 1400px;*/
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #001524;
+}
+
+::-webkit-scrollbar-thumb{
+    /*background: linear-gradient(#642bff, #ff22e6);*/
+    background:  linear-gradient(#011b2d, #fabb0c);
+    border-radius: 32px;
+}
+
+::-webkit-scrollbar{
+    width: 14px;
+}
+
+.landing-layer-1{
     width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
-h1,h2{
+.landing-layer-2{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 10vh;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.header {
+    height: 44px;
+    color: white;
+    width: 80%;
+    margin: 4px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .15s
+}
+
+.header a{
+    color: white;
+    margin: 6px;
+}
+
+.header a:hover{
+    color: rgba(255, 255, 255, 0.678);
+}
+
+.right-side{
+    display: flex;
+}
+
+.search{
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.search svg{
+    margin-bottom: -10px;
+    width: 28px;
+}
+
+.search:hover,
+.theme:hover{
+    cursor: pointer;
+}
+
+.logo svg{
+    margin: auto 3px -8px 8px;
+    width: 28px;
+}
+
+.theme svg{
+    margin-bottom: -15px;
+    margin-left: 12px;
+    width: 28px;
+}
+
+.landing-info{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 3;
+}
+
+.landing-info h1{
+    font-size: 40px;
+    margin: 6px auto;
+    max-width: 400px;    
+}
+
+.landing-btn{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 12px 24px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: .15s;
+}
+
+.landing-btn:hover{
+    background-color: rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+}
+
+.hamburger{
+    margin: auto 10px;
+    display: none;
+    padding: 4px;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.hamburger div{
+    height: 2px;
+    margin: 4px;
+    width: 20px;
+    background-color: #fabb0c;
+}
+
+.form-landing{
     text-align: center;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px rgba(8, 8, 8, 0.164),-1px -1px 1px rgba(8, 8, 8, 0.164);
+    position: absolute;
+    right: 5vw;
+    top: 60vh;
+    z-index: 3;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-landing h1{
+    margin: 18px auto;
+}
+
+.form-landing p{
+    color: rgb(96,96,96);
+    margin-bottom: 5px;
+
+}
+
+.form-landing input{
+    width: 80%;
+    margin: 5px auto;
     padding: 8px;
-    background-color: lightblue;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.048);
 }
 
-p{
-    margin: 30px auto;
+.form-landing button{
+    margin: 12px auto;
+    padding: 8px 36px;
+    color: white;
+    background-color: #fabb0c;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: .15s;
+}
+
+.form-landing button:hover,
+.left button:hover,
+.feature-curses-btn:hover{
+    cursor: pointer;
+    background-color: #f8bf21d0;
+    color: rgb(96,96,96);
+}
+
+
+.feature-section{
+    width: 80%;
+    margin: 200px auto 80px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-section div{
+    max-width: 320px;
+    min-width: 250px;
+    min-height: 340px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.089), -2px -2px 1px rgba(0, 0, 0, 0.089);
+}
+
+.feature-section h1,
+.feature-section p{
+    margin: 6px auto;
+}
+
+
+.feature-section svg{
+    margin: 10px auto;
+    width: 32px;
+}
+
+.about-us{
+    width: 90%;
+    margin: 18px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-us .left{
+    padding: 40px;
+    
+}
+
+.about-us .right{
+    width: 320px;
+    
+}
+
+.left .title{
+    color: red;
+    font-weight: 900;
+    margin: 10px auto;
+}
+
+.left h1,
+.left h3{
+    margin: 20px auto;
+}
+
+.left button,
+.feature-curses-btn{
+    padding: 10px 24px;
+    font-size: 18px;
+    margin: 10px auto;
+    background-color: #fabb0c;
+    border: none;
+    border-radius: 4px;
+}
+
+.right{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.right div{
+    flex: 50%;
+    padding: 3px;
+    position: relative;
+}
+
+.lenght-img{
+    position: relative;
+    top: -90px;
+}
+
+
+
+.right img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.right h2{
     text-align: center;
-    padding: 30px 60px;
+    font-size: 18px;
+    z-index: 9;
+    position: absolute;
+    bottom: 105px;
+    background-color: #fabb0c;
+    width: 96%;
+    padding-left: 4px;
+}
+
+.right .normal h2{
+    z-index: 9;
+    position: absolute;
+    bottom: 17px;
+}
+
+.section-03{
+    padding: 0 40px;
+    background-color: rgba(128, 128, 128, 0.295);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-03 div{
+    flex: 1;
+    min-width: 300px;
+}
+
+.right-03 .fill-1{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    margin: 44px auto;
+}
+
+.fill-1 h2{
+    color: red;
+    margin: 20px;
+}
+
+.fill-1 div{
+    min-width: 200px;
+}
+
+.left-03{
+    text-align: center;
+}
+
+.left-03 img{
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.feature-courses{
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.feature-courses .title,
+.feature-courses .popular-courses,
+.quote-cantainer .title,
+.quote-cantainer .feedbakcs-title{
+    text-align: center;
+}
+
+.feature-courses .title,
+.quote-cantainer .title{
+    margin: 12px 0 4px;
+    color: red;
+    font-weight: 900;
+}
+
+.feature-courses .popular-courses,
+.quote-cantainer .feedbakcs-title{
+    margin: 0 0 20px;
+    font-weight: 900;
+}
+.quote-cantainer .feedbakcs-title{
+    color: white;
+}
+
+.papular-corses-box{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: .15s;
+}
+
+.course-box{
+    flex: 1;
+    max-width: 250px;
+    min-width: 250px;
+    height: 415px;
+    margin: 12px;
+}
+
+
+
+.course-box .top-box {
+    position: relative;
+    height: 250px;
+}
+
+.course-box .top-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    
+}
+
+.top-box span{
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #ff4040;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.top-box .free{
+    left: 80px;
+}
+
+.bottom-box{
+    padding: 18px 10px;
+}
+
+.bottom-box .price-star{
+    color: rgb(96,96,96);
+    padding: 0px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.price-star img{
+    height: 44px;
+}
+
+.no-students{
+    color: rgb(96,96,96);
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.no-students svg{
+    width: 22px;
+}
+
+.full-cantainer{
+    position: relative;
+    margin: 40px 0;
+    margin-bottom: 100px;
+}
+.background-cantainer{
+    background-image: url(images/quoate\ bak.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+    filter: brightness(.5);
+}
+
+.quote-cantainer{
+    position: absolute;
+    top: 10%;
+}
+
+.quote svg{
+    width: 60px;
+}
+
+.quote-box{
+    width: 80%;
+    margin: 100px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quote{
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.quote p{
+    color: white;
+    margin: 15px 0 8px;
+}
+
+.quote h3{
+    color: white;
+    font-weight: 600;
+}
+
+.quote h4{
+    color: rgba(223, 223, 223, 0.712);
+    font-size: 14px;
+}
+
+
+.join-us-cantainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.041);
+}
+
+.join-us-cantainer div{
+    flex: 1;
+    min-width: 320px;
+}
+
+.left-join{
+    margin: 10px 10px 10px 10%;
+    padding: 20px;
+}
+
+.left-join .title{
+    color: red;
+    font-weight: 900;
+    margin: 30px 0 2px;
+}
+
+.title-2 h1{
+    margin: 2px 0 10px;
+    font-weight: 500;
+    max-width: 450px;
+}
+
+.left-join p{
+    max-width: 440px;
+    color: rgb(96,96,96);
+    margin: 10px 0  6px;
+}
+
+.title-2 h1 span{
+    font-weight: 900;
+}
+.right-join img{
+    width: 100%;
+    min-height: 450px;
+    object-fit: cover;
+
+}
+
+.left-join input{
+    height: 35px;
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.left-join button{
+     height: 35px;
+    padding: 10px;
+    margin: 4px 0;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    background-color: #fabb0c;
+    border: none;
+    transition: .15s;
+}
+
+.left-join button:hover{
+    background-color: #faba0cd0;
+    color: gray;
+    cursor: pointer;
+}
+
+.footer-cantainer{
+    width: 100%;
+    color: white;
+}
+
+.footer-top{
+    display: flex;
+
+    justify-content: center;
+    background-color: #001524;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.footer-top div{
+    margin: 14px 5px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.footer-top .about  svg{
+    width: 40px;
+    padding: 10px;
+    background-color: #011b2d;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+
+.footer-top .about  svg:hover{
+    cursor: pointer;
+}
+
+.footer-cantainer h1{
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.footer-cantainer div{
+    flex: 1;
+    margin: 0 0;
+}
+
+details{
+    margin: 6px 15px;
+}
+
+details p{
+    margin: 8px 24px;
+}
+
+details:hover,
+details p:hover{
+    cursor: pointer;
+}
+
+
+.footer-bottom svg{
+    width: 14px;
+    margin: 0 4px;
+}
+
+
+.footer-bottom{
+    letter-spacing: 2px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #011b2d;
+}
+
+@media screen and (max-width: 950px) {
+    .form-landing{
+        position: static;
+        max-width: 340px;
+        margin: 30px auto;
+
+    }
+
+    .header{
+        width: 90%;
+    }
+
+    .feature-section{
+        margin: 50px auto;
+    }
+    .papular-corses-box{
+        width: 90%;
+    }
+
+
+    .background-cantainer{
+        
+        height: 120vh;
+        
+    }
+    
+    .quote-box{
+        margin: 40px auto 0;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 899px){
+.join-us-cantainer .left-join{
+      margin: 10px auto;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 20px;
+}
+    .right-join img{
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+
+}
+
+    .left-join input{
+    width: 100%;
+    max-width: 450px;
+    
+}
+
+.left-join button{
+    width: 100%;
+    max-width: 450px;
+}
+}
+
+@media screen and (max-width: 700px) {
+    .hamburger{
+        display: block;
+    }
+
+    .papular-corses-box{
+        width: 95%;
+    }
+
+    .header .menu{
+        border-radius: 0 6px 6px 0;
+        padding: 20px 70px;
+        position: absolute;
+        z-index: 99;
+        left: -300px;
+        top: 44px;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.288);
+        transition: .15s;
+    }
+
+    .menu a{
+        display: block;
+        margin: 10px auto;
+
+    }
+
+    #nav-check:checked ~ .menu{
+        left: 0;
+    }
+
+
+    .background-cantainer{
+        height: 147vh;
+    }
+    
+    .quote-cantainer{
+        position: absolute;
+        top: 5%;
+    }
+
+    
+    .quote-box{
+        width: 90%;
+        margin: 30px auto 0;
+    }
+    
+    
+.background-cantainer{
+    background-position: center;
+}
+
 }
 
